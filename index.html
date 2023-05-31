@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .show {
+      display: grid;
+    }
+  </style>
+</head>
+<body>
+<img src="http://59.92.68.93:8000/maria_logo.png" alt="Maria Logo">
+<h1>Consolidated Logs of Maria Admin & Retail </h1>
+<button class="button" onclick="openLogsNGLAdmin()">MariaNGL Admin</button>
+<button class="button" onclick="openLogsNGLRetail()">MariaNGL Retail</button>
+<button class="button" onclick="openLogsTVLAdmin()">MariaTVL Admin</button>
+<button class="button" onclick="openLogsTVLRetail()">MariaTVL Retail</button>
+<button class="button" onclick="openLogsVLRAdmin()">MariaVLR Admin</button>
+<button class="button" onclick="openLogsVLRRetail()">MariaVLR Retail</button>
+
+<div id="myDropdownNGLAdmin" class="dropdown-content">
+      <a href="http://103.78.159.123:6002/adminlogs/"tab>Laravel</a>
+      <a href="http://103.78.159.123:6002/adminlogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownNGLRetail" class="dropdown-content">
+      <a href="http://103.78.159.123:8000/retaillogs/">Laravel</a>
+      <a href="http://103.78.159.123:8000/retaillogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownTVLAdmin" class="dropdown-content">
+      <a href="http://59.92.68.121:6002/adminlogs/"tab>Laravel</a>
+      <a href="http://59.92.68.121:6002/adminlogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownTVLRetail" class="dropdown-content">
+      <a href="http://59.92.68.121:8000/retaillogs/">Laravel</a>
+      <a href="http://59.92.68.121:8000/retaillogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownVLRAdmin" class="dropdown-content">
+      <a href="http://59.92.68.93:6002/adminlogs/"tab>Laravel</a>
+      <a href="http://59.92.68.93:6002/adminlogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownVLRRetail" class="dropdown-content">
+      <a href="http://59.92.68.93:8000/retaillogs/">Laravel</a>
+      <a href="http://59.92.68.93:8000/retaillogs/nginx">Nginx</a>
+ </div>
+  <script>
+    function openLogsNGLAdmin() {
+     var dropdownContent = document.getElementById("myDropdownNGLAdmin");
+     dropdownContent.classList.toggle("show");
+    }
+    function openLogsNGLRetail() {
+     var dropdownContent = document.getElementById("myDropdownNGLRetail");
+     dropdownContent.classList.toggle("show");
+    }
+    function openLogsTVLAdmin() {
+     var dropdownContent = document.getElementById("myDropdownTVLAdmin");
+     dropdownContent.classList.toggle("show");
+    }
+    function openLogsTVLRetail() {
+     var dropdownContent = document.getElementById("myDropdownTVLRetail");
+     dropdownContent.classList.toggle("show");
+    }
+    function openLogsVLRAdmin() {
+     var dropdownContent = document.getElementById("myDropdownVLRAdmin");
+     dropdownContent.classList.toggle("show");
+    }
+    function openLogsVLRRetail() {
+     var dropdownContent = document.getElementById("myDropdownVLRRetail");
+     dropdownContent.classList.toggle("show");
+    }        
+    window.onclick = function(event) {
+      if (!event.target.matches('.button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+ </body>
+</html>
