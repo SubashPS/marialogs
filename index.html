@@ -53,12 +53,12 @@
 <button class="button" onclick="openLogsVLRRetail()">MariaVLR Retail</button>
 
 <div id="myDropdownNGLAdmin" class="dropdown-content">
-      <a href="http://103.78.159.123:6002/adminlogs/"tab>Laravel</a>
-      <a href="http://103.78.159.123:6002/adminlogs/nginx">Nginx</a>
+      <a href="http://59.92.120.43:6002/adminlogs/"tab>Laravel</a>
+      <a href="http://59.92.120.43:6002/adminlogs/nginx">Nginx</a>
  </div>
  <div id="myDropdownNGLRetail" class="dropdown-content">
-      <a href="http://103.78.159.123:8000/retaillogs/">Laravel</a>
-      <a href="http://103.78.159.123:8000/retaillogs/nginx">Nginx</a>
+      <a href="http://59.92.120.43:8000/retaillogs/">Laravel</a>
+      <a href="http://59.92.120.43:8000/retaillogs/nginx">Nginx</a>
  </div>
  <div id="myDropdownTVLAdmin" class="dropdown-content">
       <a href="http://59.92.68.121:6002/adminlogs/"tab>Laravel</a>
@@ -73,6 +73,14 @@
       <a href="http://59.92.68.93:6002/adminlogs/nginx">Nginx</a>
  </div>
  <div id="myDropdownVLRRetail" class="dropdown-content">
+      <a href="http://59.92.68.93:8000/retaillogs/">Laravel</a>
+      <a href="http://59.92.68.93:8000/retaillogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownMKTRetail" class="dropdown-content">
+      <a href="http://59.92.68.93:8000/retaillogs/">Laravel</a>
+      <a href="http://59.92.68.93:8000/retaillogs/nginx">Nginx</a>
+ </div>
+ <div id="myDropdownMKTRetail" class="dropdown-content">
       <a href="http://59.92.68.93:8000/retaillogs/">Laravel</a>
       <a href="http://59.92.68.93:8000/retaillogs/nginx">Nginx</a>
  </div>
@@ -100,7 +108,15 @@
     function openLogsVLRRetail() {
      var dropdownContent = document.getElementById("myDropdownVLRRetail");
      dropdownContent.classList.toggle("show");
-    }        
+    }
+    function openLogsMKTAdmin() {
+     var dropdownContent = document.getElementById("myDropdownMKTAdmin");
+     dropdownContent.classList.toggle("show");
+    } 
+    function openLogsMKTRetail() {
+     var dropdownContent = document.getElementById("myDropdownMKTRetail");
+     dropdownContent.classList.toggle("show");
+    } 
     window.onclick = function(event) {
       if (!event.target.matches('.button')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
